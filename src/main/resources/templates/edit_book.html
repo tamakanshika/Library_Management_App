@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@1,700&display=swap" rel="stylesheet">
+  <title>Edit Book</title>
+  <style>
+    body {
+        font-family: 'Alegreya', serif;
+        font-weight: 700;
+        font-style: italic;
+        background-color: #f7f1e3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .container {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 750px;
+        text-align: center;
+    }
+    h1 {
+        color: #2596be;
+    }
+    label {
+        display: block;
+        margin: 10px 0 5px;
+        font-weight: bold;
+    }
+    input, select {
+        width: 80%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .readonly-field {
+        background-color: #f0f0f0;
+    }
+    button {
+        background-color: #2596be;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        width: 100%;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    button:hover {
+        background-color: #4834d4;
+    }
+    .back-link {
+        display: block;
+        margin-top: 10px;
+        text-decoration: none;
+        color: #2596be;
+        font-weight: bold;
+    }
+    .back-link:hover {
+        text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Edit Book</h1>
+  <form th:action="@{/books/update/{id}(id=${book.bookId})}" method="post">
+    <label>Book ID:</label>
+    <input type="text" th:value="${book.bookId}" name="bookId" class="readonly-field" readonly/>
+
+    <label>Title:</label>
+    <input type="text" th:value="${book.title}" name="title" required/>
+
+    <label>Author:</label>
+    <input type="text" th:value="${book.author}" name="author" required/>
+
+    <label>Genre:</label>
+    <input type="text" th:value="${book.genre}" name="genre" required/>
+
+    <label>Status:</label>
+    <select name="availabilityStatus" required>
+      <option value="AVAILABLE" th:selected="${book.availabilityStatus == 'AVAILABLE'}">Available</option>
+      <option value="CHECKED_OUT" th:selected="${book.availabilityStatus == 'CHECKED_OUT'}">Checked Out</option>
+    </select>
+
+    <button type="submit">Update</button>
+  </form>
+  <a href="/books" class="back-link">Back to List</a>
+</div>
+</body>
+</html>

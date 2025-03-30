@@ -1,0 +1,153 @@
+body {
+    font-family: 'Alegreya', serif;
+    font-weight: 500;
+    background-color: #f7f1e3;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+h1 {
+    color: #2596be;
+}
+
+/* Search Bar Styling */
+.search-form {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.search-bar {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+}
+
+.search-btn {
+    background-color: #2596be;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Add Button */
+.add-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #2596be;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.add-btn:hover {
+    background: #218838;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #2596be;
+    color: white;
+}
+
+tr:hover {
+    background: #f1f1f1;
+}
+
+/* Status Colors */
+.status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.available {
+    background-color: #2596be;
+    color: white;
+}
+
+.unavailable {
+    background-color: #d1d3d5;
+    color: white;
+}
+
+/* Action Buttons */
+.action-btn {
+    font-size: 20px;
+    margin: 0 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.edit-btn {
+    color: #ffc107;
+}
+
+.delete-btn {
+    color: #dc3545;
+}
+
+.action-btn:hover {
+    transform: scale(1.2);
+}
+
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.home-btn, .add-btn {
+    text-decoration: none;
+    background-color: #2596be;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.home-btn:hover, .add-btn:hover {
+    background-color: #0056b3;
+}
+
+
+
