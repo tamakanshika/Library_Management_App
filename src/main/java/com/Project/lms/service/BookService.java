@@ -18,19 +18,14 @@ public class BookService {
         return bookRepository.findAll();
     }
 
-
-//    public void addBook(Book book) {
-//        bookRepository.save(book);
-//    }
-
     public String addBook(Book book) {
         // Check if a book with the same bookId already exists
         if (bookRepository.findByBookId(book.getBookId()).isPresent()) {
-            return "exists"; // Return status indicating duplicate bookId
+            return "exists";
         }
 
         bookRepository.save(book);
-        return "success"; // Return status indicating successful addition
+        return "success";
     }
 
     public Optional<Book> getBookById(String id) {

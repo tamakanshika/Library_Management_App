@@ -20,6 +20,7 @@ import java.util.Optional;
 public class BookController {
 
     private static final Logger log = LoggerFactory.getLogger(BookController.class);
+
     @Autowired
     BookRepository repo;
 
@@ -52,11 +53,11 @@ public class BookController {
 
         if ("exists".equals(status)) {
             redirectAttributes.addFlashAttribute("error", "A book with this Book ID already exists!");
-            return "redirect:/books/add"; // Redirect to add book page
+            return "redirect:/books/add";
         }
 
         redirectAttributes.addFlashAttribute("success", "Book added successfully!");
-        return "redirect:/books"; // Redirect to book list page
+        return "redirect:/books";
     }
 
     @GetMapping("/edit/{id}")
@@ -74,14 +75,14 @@ public class BookController {
     @PostMapping("/update/{id}")
     public String updateBook(@PathVariable String id, @ModelAttribute("book") Book updatedBook) {
         bookService.updateBook(id, updatedBook);
-        return "redirect:/books"; // Redirect to book list after update
+        return "redirect:/books";
     }
 
     // Delete a book
     @GetMapping("/delete/{id}")
     public String deleteBook(@PathVariable String id) {
         bookService.deleteBook(id);
-        return "redirect:/books"; // Redirect to book list after deletion
+        return "redirect:/books";
     }
 
     @GetMapping("/search")
