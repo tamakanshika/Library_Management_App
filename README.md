@@ -55,6 +55,7 @@ This webapp is deployed at the following link:  https://librarymanagementapp-pro
 - **Add New Book**: `/books/add`
 - **Edit Book**: `/books/edit/{bookId}`
 - **Delete Book**: `/books/delete/{bookId}`
+- **Search Book**: `/books/search?query={string}`
 
 ---
 
