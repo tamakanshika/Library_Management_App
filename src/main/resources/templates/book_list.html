@@ -5,7 +5,8 @@
     <link rel="stylesheet" th:href="@{/css/table_style.css}">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500&display=swap" rel="stylesheet">
     <!-- Include FontAwesome 6 CDN -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+<!--    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
@@ -57,7 +58,7 @@
                 </a>
                 <a th:href="@{/books/delete/{id}(id=${book.bookId})}" class="action-btn delete-btn" title="Delete"
                    onclick="return confirm('Are you sure you want to delete this book?');">
-                    <i class="fa fa-trash-o fa-lg" title="Delete"></i>
+                    <i class="fa-solid fa-trash" title="Delete"></i>
                 </a>
             </td>
         </tr>
