@@ -12,7 +12,7 @@ This is a **Library Management System** built with **Java Spring Boot** and **Mo
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Backend**: Java, Spring Boot
 - **Database**: MongoDB Atlas
 - **Frontend**: Thymeleaf, HTML, CSS
@@ -20,11 +20,11 @@ This is a **Library Management System** built with **Java Spring Boot** and **Mo
 
 ---
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 
 ### **1 Clone the Repository**
 ```bash
- git clone https://github.com/your-username/library-management-system.git
+ git clone https://github.com/tamakanshika/library-management-system.git
  cd library-management-system
 ```
 
@@ -32,8 +32,8 @@ This is a **Library Management System** built with **Java Spring Boot** and **Mo
 - Update the `application.properties` file with your **MongoDB URI**:
   ```properties
   spring.application.name=lms
-  spring.data.mongodb.uri=mongodb+srv://<username>:<password>@<your-cluster>.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1
-  spring.data.mongodb.database=LMS
+  spring.data.mongodb.uri=mongodb+srv://<username>:<password>@<your-cluster>.mongodb.net/?retryWrites=true&w=majority&appName=<appname>
+  spring.data.mongodb.database=<database-name>
   ```
 
 ### **3️ Run the Application**
